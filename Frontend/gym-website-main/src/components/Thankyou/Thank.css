@@ -1,0 +1,129 @@
+/* Container styling with background and fade-in animation */
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./thanku.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  animation: fadeInBackground 2s ease-in-out;
+  position: relative;
+  overflow: hidden; /* To hide the shimmer overflow */
+}
+
+/* Background fade-in keyframes */
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content styling with entrance animation */
+.thank-you-content {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+
+/* Slide-up animation keyframes */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading animation */
+.thank-you-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards 0.3s;
+}
+
+/* Paragraph animation */
+.thank-you-content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards 0.5s;
+}
+
+/* Fade-in text keyframes */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button animation with bounce effect */
+.back-home {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fd9a00;
+  text-decoration: none;
+  border: 1px solid #fd9a00;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  animation: buttonBounce 1.5s ease-in-out infinite;
+}
+
+/* Button bounce animation */
+@keyframes buttonBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Button hover effect */
+.back-home:hover {
+  background-color: #fd9a00;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Shimmer effect for the background */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.thank-you-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 8s linear infinite; /* Smooth infinite shimmer */
+  z-index: -1; /* Behind the content */
+}

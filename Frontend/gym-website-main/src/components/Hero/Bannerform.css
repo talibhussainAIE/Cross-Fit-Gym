@@ -1,0 +1,149 @@
+/* General form styling with bouncing animation */
+.bannerform {
+  position: relative;
+  padding: 20px 25px;
+  background-color: #fff;
+  border-radius: 0 70px;
+  box-shadow: 8px 8px 0 #fd9a00;
+  width: 450px;
+  animation: bounce 5s ease-in-out infinite, fadeInForm 1.5s ease-in-out;
+  left:73px ;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Starting and ending position */
+  }
+  50% {
+    transform: translateY(-20px); /* Middle position for the bounce */
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInForm {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Keyframe animations for sliding text */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframe for button bounce */
+@keyframes buttonBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Header and paragraph animations */
+.bannerform h4, .bannerform p {
+  font-weight: 500;
+  color: #000;
+}
+.bannerform h4 {
+  font-size: 35px;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+.bannerform p {
+  font-size: 12px;
+  margin: 0 0 20px;
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+/* Form input and textarea styling */
+.bannerform input, .bannerform textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: 300;
+  border: 2px dashed #fd9a00;
+  color: #000;
+  border-radius: 8px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInForm 1.5s ease-in-out forwards;
+}
+
+/* Placeholder styling */
+.bannerform input::placeholder, .bannerform textarea::placeholder {
+  color: #000;
+}
+
+/* Solid border for textarea */
+.bannerform textarea {
+  border: 2px solid #fd9a00;
+}
+
+/* Button styling with bounce animation */
+.bannerform button {
+  width: 170px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  color: #000;
+  background: linear-gradient(to left, #fd9a00 0, #d98e18 100%);
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  animation: buttonBounce 1s ease-in-out;
+}
+
+/* Checkbox label styling */
+label.form-check-banner {
+  color: #232721e3;
+}
+
+/* Before and after pseudo-elements for small boxes */
+.bannerform::before, .bannerform::after {
+  content: "";
+  position: absolute;
+  background-color: #fd9a00;
+  width: 40px;
+  height: 40px;
+  z-index: -1; /* Place behind the form */
+  border-radius: 10%;
+}
+
+.bannerform::before {
+  top: -20px;
+  left: -20px;
+}
+
+.bannerform::after {
+  bottom: -20px;
+  right: -20px;
+}

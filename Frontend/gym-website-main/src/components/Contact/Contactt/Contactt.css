@@ -1,0 +1,152 @@
+/* General form styling with banner theme */
+.contactt {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 0 70px;
+  box-shadow: 8px 8px 0 #fd9a00; /* Match with banner's shadow */
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 12px;
+  animation: bounce 5s ease-in-out infinite, fadeInForm 1.5s ease-in-out;
+}
+
+/* Bouncing animation */
+/* @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+} */
+
+/* Fade-in animation */
+/* @keyframes fadeInForm {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* Header and form styling */
+.contactt h1 {
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1s ease-in-out; /* Slide in animation */
+}
+
+/* Slide in animations */
+/* @keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */
+
+.contactt form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input and label styling matching the banner form */
+.contactt label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.contactt input[type="text"],
+.contactt input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #fd9a00; /* Match with bannerform input style */
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000000;
+} 
+
+/* Placeholder styling */
+.contactt input::placeholder {
+  color: #000;
+}
+
+/* Button styling with bounce animation */
+.contactt button {
+  width: 170px;
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  background: linear-gradient(to left, #fd9a00 0%, #d98e18 100%);
+  color: #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  animation: buttonBounce 1s ease-in-out; /* Add button bounce animation */
+}
+
+/* @keyframes buttonBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+} */
+
+.contactt button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.contactt button:hover:not(:disabled) {
+  background-color: #fd9a00;
+}
+
+/* Small boxes around the form to match bannerform */
+.contactt::before, .contactt::after {
+  content: "";
+  position: absolute;
+  background-color: #fd9a00;
+  width: 40px;
+  height: 40px;
+  z-index: -1;
+  border-radius: 10%;
+}
+
+.contactt::before {
+  top: -20px;
+  left: -20px;
+}
+
+.contactt::after {
+  bottom: -20px;
+  right: -20px;
+}

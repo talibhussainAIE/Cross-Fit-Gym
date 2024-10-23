@@ -1,0 +1,64 @@
+/* Primary Colors */
+.text-primary {
+  color: #FF7F50; /* Coral */
+}
+
+.text-primary:hover {
+  color: #ffffff; /* Darker Coral */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Logo Styling */
+.navbar img {
+  height: 50px;
+  width: 50px;
+}
+.name{
+  color: #ffffff;
+}
+
+
+.navbar span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  
+}
+
+/* Mobile Menu */
+.md:hidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md:hidden button {
+  cursor: pointer;
+}
+
+/* Mobile Navigation Styling */
+.md:hidden ul {
+  background-color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

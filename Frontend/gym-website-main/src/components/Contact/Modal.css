@@ -1,0 +1,70 @@
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  position: relative;
+  
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fd9a00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.bannerform input, .bannerform textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: 300;
+  border: 2px dashed #fd9a00;
+  color: #000;
+  border-radius: 8px;
+}
+
+.bannerform input::placeholder, .bannerform textarea::placeholder {
+  color: #000;
+}
+
+.bannerform button {
+  width: 170px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  color: #000;
+  background: linear-gradient(to left, #fd9a00 0, #d98e18 100%);
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
